@@ -1,16 +1,12 @@
 #include "lista_generica.hpp"
 #include <string>
-
-
 //Nelson Catarino Tovar Valle  TV100112
-
 template <typename TIPODATO>
 class Pila : private Lista<TIPODATO>{
 	public:
 		Pila();
 		push(TIPODATO item);
 		TIPODATO pop();
-		TIPODATO extraer();
 		bool estaPilaVacia();
 		string pilaComoCadena();
 };
@@ -27,20 +23,15 @@ Pila<TIPODATO>::push(TIPODATO item){
 
 template<typename TIPODATO>
 TIPODATO Pila<TIPODATO>::pop(){
-	return this->remover(this->tamano()-1);
+	return this->remover(this->tamano() - 1);
 }
 
 template<typename TIPODATO>
-bool Pila<TIPODATO>::estaPilaVacia(){
+bool Pila<TIPODATO>::estaPilaVacia{
 	return this->estaVacia();
 }
 
 template<typename TIPODATO>
-string Pila<TIPODATO>::pilaComoCadena(){
-	return this->comoCadena();
-}
-
-template<typename TIPODATO>
-TIPODATO Pila<TIPODATO>::extraer(){
-	return this->obtener(this->tamano()-1);
+string Pila<TIPODATO>::pilaComoCadena{
+	return this->comoCadena()
 }

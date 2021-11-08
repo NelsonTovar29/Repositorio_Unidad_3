@@ -1,7 +1,7 @@
 #include "lista_generica.hpp"
 #include <string>
-
-template<typename TIPODATO>
+//Nelson Catarino Tovar Valle  TV100112
+template <typename TIPODATO>
 class Cola : private Lista<TIPODATO>{
 	public:
 		Cola();
@@ -9,7 +9,6 @@ class Cola : private Lista<TIPODATO>{
 		TIPODATO dequeue();
 		bool estaColaVacia();
 		string colaComoCadena();
-		
 };
 
 template<typename TIPODATO>
@@ -29,12 +28,10 @@ TIPODATO Cola<TIPODATO>::dequeue(){
 
 template<typename TIPODATO>
 bool Cola<TIPODATO>::estaColaVacia(){
-	return this->estaColaVacia();
+	return this->estaVacia();
 }
 
 template<typename TIPODATO>
 string Cola<TIPODATO>::colaComoCadena(){
-	return this->colaComoCadena();
+	return this->comoCadena();
 }
-
-
